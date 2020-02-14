@@ -37,7 +37,10 @@ jobs:
     executor: cypress_e2e
     working_directory: /e2e
     steps:
-      - run: cypress run
+      - run: yarn cypress:run
+      - store_artifacts:
+          path: /e2e/cypress/report
+          destination: cypress-test-report
   say_goodbye:
     executor: node
     steps:
