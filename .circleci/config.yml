@@ -10,20 +10,20 @@ executors:
 
 commands:
   say_hello:
-    description: "Simply saying hello"
+    description: 'Simply saying hello'
     parameters:
       to:
         type: string
-        default: "nobody"
+        default: 'nobody'
     steps:
       - run: echo Hello there << parameters.to >>
 
   say_goodbye:
-    description: "Simply saying goodbye"
+    description: 'Simply saying goodbye'
     parameters:
       to:
         type: string
-        default: "nobody"
+        default: 'nobody'
     steps:
       - run: echo So long << parameters.to >>
 
@@ -32,7 +32,7 @@ jobs:
     executor: node
     steps:
       - say_hello:
-          to: Mick
+          to: Gav
   cypress_test:
     executor: cypress_e2e
     working_directory: /e2e
