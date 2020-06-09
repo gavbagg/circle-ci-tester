@@ -45,7 +45,7 @@ jobs:
     executor: node
     steps:
       - say_goodbye:
-          to: Mick
+          to: Gav
 
 workflows:
   testing:
